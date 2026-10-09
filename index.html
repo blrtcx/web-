@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>七彩新闻页面 —— 月失花野的新闻网页</title>
+<!-- 要求1：使用外链方式加入样式表 -->
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<div class="page">
+
+  <!-- ==================== 头部：七彩标题 ==================== -->
+  <!-- 要求2：新闻标题使用七彩样式，合理使用 div 与 span 容器 -->
+  <header class="header">
+    <p class="exp-label">实验：七彩新闻页面</p>
+    <div class="rainbow-title">
+      <span class="c1">月</span><span class="c2">失</span><span class="c3">花</span><span class="c4">野</span><span class="c5">的</span><span class="c6">新</span><span class="c7">闻</span><span class="c8">网</span><span class="c9">页</span>
+    </div>
+  </header>
+
+  <!-- ==================== 新闻正文 ==================== -->
+  <main class="news">
+
+    <h2 class="news-title">NiKo 圆梦科隆！终夺生涯首座 Major 冠军</h2>
+
+    <p class="news-meta">
+      <span class="date">2026年09月18日 18:30</span>
+      <span class="source">来源：电竞资讯 / 科隆 Major 战报</span>
+      <span class="comments">评论(0人参与)</span>
+      <a class="readmore" href="#body">查看正文</a>
+    </p>
+
+    <!-- 要求3-II：文本缩进、行高、文本对齐 -->
+    <div class="news-body" id="body">
+      <p><strong>新浪电竞讯：</strong>在刚刚结束的科隆 Major 上，传奇选手 NiKo 终于圆梦——他随猎鹰战队（Falcons）一路过关斩将，成功捧起职业生涯第一座 Major 冠军奖杯，结束了多年来“无 Major 冠军”的遗憾。捧杯的一刻，NiKo 激动地将奖杯紧紧拥入怀中，无数守候在屏幕前的玩家为之沸腾。</p>
+
+      <!-- 新闻配图（图片 + 图注） -->
+      <figure class="news-figure">
+        <img src="img/niko-trophy.jpg" alt="NiKo 捧起冠军奖杯" />
+        <figcaption>图1　NiKo 将冠军奖杯拥入怀中（来源：HLTV）</figcaption>
+      </figure>
+
+      <p>本届科隆 Major 强手如林，共有来自世界各大赛区的顶尖战队参赛。猎鹰战队在小组赛阶段表现稳健，凭借出色的团队配合与个人发挥，以小组头名晋级淘汰赛。</p>
+
+      <p>进入淘汰赛后，赛场气氛愈发紧张。八强战、四强战中，他们接连击败多支劲旅，NiKo 更是多次在关键局打出精彩操作，率队强势挺进决赛。</p>
+
+      <p>决赛对手同样是夺冠热门，双方鏖战至决胜图。关键时刻 NiKo 顶住压力，在防守方连续化解对手的进攻，帮助猎鹰战队锁定胜局，最终以大比分击败对手夺冠。</p>
+    </div>
+
+    <!-- 要求3-III：表格样式的设定 -->
+    <h3 class="sub-title">决赛地图比分（示例）</h3>
+    <table class="data-table">
+      <caption>科隆 Major 决赛各图比分（示例）</caption>
+      <thead>
+        <tr>
+          <th>地图</th>
+          <th>比分</th>
+          <th>获胜方</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Ancient</td><td>13 : 9</td><td>猎鹰（Falcons）</td></tr>
+        <tr><td>Mirage</td><td>11 : 13</td><td>对手</td></tr>
+        <tr><td>Inferno</td><td>13 : 7</td><td>猎鹰（Falcons）</td></tr>
+        <tr><td>Nuke</td><td>13 : 10</td><td>猎鹰（Falcons）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="news-body">
+      <p>赛后，NiKo 在采访中难掩激动。他表示，这座奖杯是对自己多年坚持最好的回报，也属于一路支持他的队友与粉丝。</p>
+      <blockquote class="quote">
+        “这么多年，我一直相信自己能拿到这座奖杯。今天，它终于实现了。”——NiKo 在赛后采访中说。
+      </blockquote>
+    </div>
+
+    <!-- 第二张配图 -->
+    <figure class="news-figure">
+      <img src="img/team-stage.jpg" alt="猎鹰战队登台举杯庆祝" />
+      <figcaption>图2　猎鹰战队登台举杯，庆祝夺冠（来源：ESL）</figcaption>
+    </figure>
+
+    <h3 class="sub-title">NiKo 的漫长等待</h3>
+    <div class="news-body">
+      <p>对 NiKo 而言，这是他职业生涯的里程碑。作为世界上公认最顶尖的选手之一，他曾在多项顶级赛事中登顶，却屡屡与 Major 冠军擦肩而过。无数个日夜的坚持与磨砺，终于在本届科隆 Major 上得到回报。</p>
+
+      <!-- 图文混排：图片左浮动，文字环绕 -->
+      <p><img class="news-img-left" src="img/niko-hold.jpg" alt="NiKo 手捧奖杯" />多年来，NiKo 以稳定而富有侵略性的打法闻名，是无数 CS 玩家心中的偶像。本届赛事中，他不仅贡献了亮眼的个人数据，更在关键时刻展现出领袖气质。他的夺冠，也让“坚持终有回报”这句话有了最好的注脚。</p>
+    </div>
+
+    <h3 class="sub-title">赛场之外</h3>
+    <div class="news-body">
+      <p>本届科隆 Major 吸引了全球数以百万计的观众在线观看，现场座无虚席。夺冠之后，金色纸屑洒满舞台，猎鹰战队全体队员登台举杯，与粉丝共同庆祝这一历史性时刻。</p>
+      <p>业内评价认为，NiKo 的夺冠为他的职业生涯写下了浓墨重彩的一笔，也让本届科隆 Major 成为无数玩家会铭记的一届赛事。</p>
+    </div>
+
+    <!-- 要求3-IV：列表样式的设定 -->
+    <h3 class="sub-title">相关新闻</h3>
+    <ul class="related">
+      <li>NiKo 赛后采访：这座奖杯属于整个团队</li>
+      <li>科隆 Major 决赛战报：决胜图上演惊天逆转</li>
+      <li>粉丝盛赞 NiKo：坚持终于得到回报</li>
+      <li>赛事回顾：本届科隆 Major 五大高光时刻</li>
+    </ul>
+
+    <!-- 要求3-V：空白字符、换行的设定 -->
+    <h3 class="sub-title">空白字符与换行演示</h3>
+    <div class="white-demo">
+      <p>下面这一段保留了连续空格，并按照源码中的换行原样显示：</p>
+      <p class="pre">第一行：这是    一段     保留了多个空格的文本
+第二行：这里通过换行符（Enter）进行了换行
+第三行：空白字符与换行都会原样呈现</p>
+      <p>另外，也可以使用 &lt;br /&gt; 标签强制换行：<br />这一行就是通过换行标签另起的一行。</p>
+    </div>
+
+  </main>
+
+  <!-- ==================== 页脚 ==================== -->
+  <footer class="footer">
+    © 2026 月失花野的新闻网页 · Web程序设计作业3 · 七彩新闻页面
+  </footer>
+
+</div>
+</body>
+</html>

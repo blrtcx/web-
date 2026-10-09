@@ -1,0 +1,209 @@
+/* =========================================================
+   七彩新闻页面  —— 外链样式表 (css/style.css)
+   覆盖实验要求：
+   1. 外链样式表  2. 七彩标题  3. 字体/大小/粗细、
+      缩进/行高/对齐、表格、列表、空白字符与换行、变量
+   ========================================================= */
+
+/* 要求3-VI（选做）：变量的定义和引用 */
+:root {
+  --main-color: #c0392b;      /* 主题色（用于小标题竖线） */
+  --accent-color: #2c7be5;    /* 强调色（链接、标记） */
+  --page-bg: #eef3fa;         /* 页面背景 */
+  --card-bg: #ffffff;         /* 卡片背景 */
+  --text-color: #222222;      /* 正文颜色 */
+  --font-main: "Microsoft YaHei", "微软雅黑", "SimSun", Arial, sans-serif;
+}
+
+/* 基础重置 */
+* { box-sizing: border-box; }
+
+/* 要求3-I：字体、字体大小、字体粗细的总体设置 */
+body {
+  margin: 0;
+  background-color: var(--page-bg);       /* 引用变量 */
+  color: var(--text-color);
+  font-family: var(--font-main);          /* 字体 */
+  font-size: 16px;                        /* 字号 */
+  font-weight: 400;                       /* 粗细 */
+  line-height: 1.75;
+}
+
+/* 页面卡片容器（合理使用 div） */
+.page {
+  width: 900px;
+  margin: 24px auto;
+  padding: 40px 56px;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* ---------------- 头部 ---------------- */
+.exp-label {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #444;
+}
+
+/* 要求2：七彩标题（div + span 实现） */
+.rainbow-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  margin: 0 0 20px;
+}
+.rainbow-title .c1 { color: #e74c3c; }   /* 红 */
+.rainbow-title .c2 { color: #e67e22; }   /* 橙 */
+.rainbow-title .c3 { color: #f1c40f; }   /* 黄 */
+.rainbow-title .c4 { color: #2ecc71; }   /* 绿 */
+.rainbow-title .c5 { color: #1abc9c; }   /* 青 */
+.rainbow-title .c6 { color: #3498db; }   /* 蓝 */
+.rainbow-title .c7 { color: #9b59b6; }   /* 紫 */
+.rainbow-title .c8 { color: #e84393; }   /* 粉 */
+.rainbow-title .c9 { color: #795548; }   /* 棕 */
+
+/* ---------------- 新闻标题与信息 ---------------- */
+.news-title {
+  margin: 8px 0 10px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+}
+
+.news-meta {
+  margin: 0 0 22px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+.news-meta .source { margin: 0 10px; }
+.news-meta .comments { margin-right: 10px; }
+.news-meta .readmore {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.news-meta .readmore:hover { text-decoration: underline; }
+
+/* 要求3-II：文本缩进、行高、文本对齐 */
+.news-body p {
+  text-indent: 2em;        /* 首行缩进两个字符 */
+  line-height: 2;          /* 行高 */
+  text-align: justify;     /* 两端对齐 */
+  margin: 0 0 14px;
+}
+.news-body strong { font-weight: 700; }
+.news-body em { font-style: italic; }
+
+/* 新闻配图（figure/figcaption） */
+.news-figure {
+  margin: 18px 0;
+  text-align: center;
+}
+.news-figure img {
+  max-width: 100%;
+  border: 1px solid #e0e6ee;
+  border-radius: 4px;
+}
+.news-figure figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* 图文混排：图片左浮动，文字环绕 */
+.news-img-left {
+  float: left;
+  width: 220px;
+  margin: 6px 16px 6px 0;
+  border: 1px solid #e0e6ee;
+  border-radius: 4px;
+}
+
+/* 引用（赛后采访） */
+.quote {
+  margin: 14px 24px;
+  padding: 10px 18px;
+  border-left: 4px solid var(--accent-color);
+  background-color: #f4f8ff;
+  color: #33507a;
+  font-style: italic;
+  text-indent: 0;
+}
+
+/* 小标题 */
+.sub-title {
+  margin: 26px 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b4a8a;
+  border-left: 5px solid var(--main-color);
+  padding-left: 10px;
+}
+
+/* 要求3-III：表格样式的设定 */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;     /* 合并边框 */
+  margin: 0 auto 18px;
+  font-size: 15px;
+}
+.data-table caption {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+.data-table th,
+.data-table td {
+  border: 1px solid #d6dde6;
+  padding: 8px 10px;
+  text-align: center;
+}
+.data-table th {
+  background-color: #eaf1fb;
+  color: #1b4a8a;
+  font-weight: 700;
+}
+.data-table tbody tr:nth-child(even) { background-color: #f8fbff; }
+.data-table tbody tr:hover { background-color: #eef6ff; }
+
+/* 要求3-IV：列表样式的设定 */
+.related {
+  list-style-type: square;    /* 列表标记 */
+  list-style-position: outside;
+  padding-left: 26px;
+  margin: 0 0 8px;
+}
+.related li {
+  margin: 6px 0;
+  line-height: 1.9;
+}
+.related li::marker { color: var(--accent-color); }
+
+/* 要求3-V：空白字符、换行的设定 */
+.white-demo {
+  border: 1px dashed #b9d3f5;
+  background-color: #fbfdff;
+  padding: 12px 18px;
+}
+.white-demo p { margin: 6px 0; }
+.white-demo .pre {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  color: #0b5ed7;
+  white-space: pre-wrap;      /* 保留空格与换行，同时自动换行 */
+}
+
+/* ---------------- 页脚 ---------------- */
+.footer {
+  margin-top: 30px;
+  padding-top: 14px;
+  border-top: 1px solid #e5eaf1;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
